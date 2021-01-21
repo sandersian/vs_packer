@@ -1,0 +1,7 @@
+packer_cache
+output-virtualbox-iso
+CentOS-7-x86_64-Minimal-2003.iso
+guest-tools-7.45.0-2.xcpng8.1.iso
+consul_1.9.1_linux_amd64.zip
+local_CA.crt
+authorized_keys
