@@ -18,6 +18,7 @@ locals {
   consul_service_fullpath = vault("/secret/data/packer_build/xoa_basic", "consul_service_fullpath")
   ansible_keys_fullpath = vault("/secret/data/packer_build/xoa_basic", "ansible_keys_fullpath")
   root_passwd = vault("/secret/data/packer_build/xoa_basic", "root_passwd")
+  add_consul_tag_path = vault("/secret/data/packer_build/xoa_basic", "add_consul_tag_path")
 }
 
 source "virtualbox-iso" "xoa_basic" {
@@ -67,6 +68,10 @@ build {
   provisioner "file" {
     source = local.ansible_keys_fullpath
     destination = "/var/tmp/ansible_keys"
+  }
+  provisioner "file" {
+    source = local.add_consul_tag_path
+    destination = "/usr/local/bin/add_consul_tag.sh"
   }
   provisioner "shell" {
     inline = [

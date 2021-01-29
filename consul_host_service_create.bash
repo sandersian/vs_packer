@@ -8,8 +8,8 @@ cat <<EOF > /consul/config/host_service.json
     "service": {
         "name": "$thishost",
         "tags": [
-            "host",
-            "xcp-ng-vm"
+            "ansible_hosts",
+            "xcp_ng_vm"
         ]
     }
 }
