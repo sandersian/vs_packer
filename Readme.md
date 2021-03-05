@@ -14,10 +14,3 @@ We assume you have VirtualBox and Hashicorp Packer installed.
 Tested with the following:
 * Packer v1.6.6
 * VirtualBox v6.1
-
-### Config/Execution
-*Populate the values as apprpriate in image_build.sh
-*Make sure image_build.sh is executable
->chmod +x image_build.sh
-*Kick it off
->./image_build.sh
